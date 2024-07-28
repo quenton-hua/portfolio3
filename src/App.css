@@ -1,6 +1,69 @@
-.App {
-  text-align: center;
+h1, h2, h3, h4, h5, p{
+  padding: 0;
+  margin: 0;
+  color: white;
 }
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+}
+
+.App {
+  display: flex;
+  width: 100vw;
+  background: linear-gradient(to bottom right, #252738, #1f2029);
+  justify-content: center;
+}
+section.introduction{
+  height: 100vh;
+}
+
+section.introduction .row2{
+  display: flex;
+}
+
+section.introduction .row2 .subtitle-container{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.introduction .title{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+section.introduction h1{
+  font-size: 11rem;
+  font-weight: 400;
+  line-height: 1;
+
+  color:white
+}
+
+section.introduction h2{
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+section.introduction h2 b{
+  font-weight: 600;
+}
+
+section.introduction h2 b.role{
+  color: #DDAF6B;
+}
+
+section.introduction h2 b.school{
+  color: #9A3535;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -26,6 +89,145 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.projects {
+  background: linear-gradient(to bottom right, #1f2029, #252738);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card{
+  color:white;
+  position: relative; 
+  height: 24rem;
+  width: 20rem;
+}
+
+
+
+.project-card .content{
+  background: linear-gradient(to bottom right,#242424, #141414);
+  padding: 2.5rem 2.5rem;
+  height: 24rem;
+  width: 20rem;
+  border-radius: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+
+  transition: all 0.5s ease;
+}
+
+.project-card .thumbnail{
+  position: absolute;
+  height: 24rem;
+  width: 20rem;
+  background-color: #ffffff;
+  position: absolute;
+  top:-2rem;
+  border-radius: 25px;
+  scale: 0.95;
+  z-index: 1;
+  background: url('https://images.unsplash.com/photo-1720451815682-3353b81a6633?q=80&w=1578&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+
+
+  transition: top 0.3s ease;
+}
+
+
+
+
+.project-card:hover .content{
+  top: 0.5rem;
+}
+
+.project-card:hover .thumbnail{
+  top: -5rem;
+}
+
+
+.project-card .thumbnail:hover .frosted-glass{
+  opacity: 1;
+}
+
+.project-card .thumbnail .frosted-glass{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(133, 133, 133, 0.2); /* Adjust color and opacity as needed */
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+ 
+}
+
+.project-card .thumbnail .frosted-glass .buttons-section{
+  height: calc(5rem);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  
+}
+
+.project-card .thumbnail .frosted-glass .buttons-section button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  cursor: pointer;
+
+}
+
+.project-card .thumbnail .frosted-glass .buttons-section button:hover{
+  opacity: 0.5;
+}
+
+
+.project-card h1 {
+  font-size: 32px;
+
+}
+
+.project-card .gap-filler{
+  flex: auto;
+}
+
+.project-card .divider{
+  width: 100%;
+  height: 0.3rem;
+  background: linear-gradient(to right, yellow 0%, green 50%, green 75%, blue 100%);
+  border-radius: 25px;
+}
+
+.project-card h1, h5{
+  padding: 0;
+  margin: 0;
+}
+
+.project-card .skills-section{
+  font-style: italic;
+  font-weight: normal;
+  color: #9F9F9F;
+  padding: 0.25rem 0rem 0.8rem 0rem;
+}
+
+.project-card p{
+  padding: 0;
+  margin: 0;
+  padding: 1.2rem 0rem;
 }
 
 @keyframes App-logo-spin {
